@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: kakao;
+}
+
+@font-face {
+    font-family: kakao;
+    src: url(../font/KakaoOTFRegular.otf);
+}
+
+
+.mypage_container {
+    margin-left: 35px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.both_mypage_container {
+    display: flex;
+    width: 50%;
+}
+
+.mypage_container h4 {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    position: sticky;
+    top: 92px;
+}
+
+.mypage_menu_list {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 92px;
+}
+
+.mypage_menu_list a {
+    color: black;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    padding: 18px 28px 18px 28px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05) !important;
+    background-color: #fff;
+}
+
+.left_mypage_menu_box {
+    position: relative;
+    max-width: 1440px;
+
+}
+
+.left_mypage_menu_title {
+    height: 100vh;
+    width: 322px;
+    margin-right: 86px;
+    display: inline-block;
+    margin-bottom: 18px;
+
+}
+
+
+.left_mypage_menu {
+    width: 25vw;
+    position: sticky;
+    top: 135px;
+    overflow: hidden;
+}
+
+.right_mypage_menu {
+    width: 1390px;
+}

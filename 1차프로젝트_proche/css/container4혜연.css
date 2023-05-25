@@ -1,0 +1,78 @@
+#container4 {
+    width:99vw;
+    height:100vh;
+    position: relative;}
+
+#container4 #image{
+    width:100%;
+    height:100%;
+    background-image: url('../img/porsche-container4.jpeg');
+    background-size: cover;
+    background-position: center center;
+    display:flex;
+    justify-content: center;
+    margin-top: -120px;}
+
+#container4 #image:hover {
+        filter: brightness(50%);
+    }
+    
+
+
+#container4 >#text{
+    position: absolute;
+    top: 20% ;
+    left: 5%;
+    color:white;
+    font-weight: bold;
+} 
+
+#container4 >#text h1{ 
+    font-size: 35px;
+
+}
+
+#container4 >#text h3{
+    font-size: 16px;
+    padding: 10px;
+}
+
+#container4 >#text p{
+    font-size: 16px;
+    padding: 15px;
+    margin-left: -15px;
+    font-weight: normal;
+}
+
+
+.title1:hover + .hr1{
+    border: 1px solid red;
+    animation-name: lineanimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;   
+}
+.title2:hover + .hr2{
+    border: 1px solid red;
+    animation-name: lineanimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;   
+}
+.title3:hover + .hr3{
+    border: 1px solid red;
+    animation-name: lineanimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;   
+}
+
+
+/* 라인애니메이션 title:hover안먹음 해결해야함 
+h3으로 타이틀 구간을 만들었는데 hover가 안먹어서 
+h3을 감싸는 <div>영역을 만들어서 해결함*/
+
+@keyframes lineanimation {
+    0% {
+       width: 30px;
+    }
+    100% {width: 380px;}
+    
+    }

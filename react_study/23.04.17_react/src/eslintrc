@@ -1,0 +1,11 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "plugin:react-hooks/recommended"
+    ],
+    "rules": {
+      "no-console": "warn",
+      "no-debugger": "warn"
+    }
+  }
+  

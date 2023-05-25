@@ -1,0 +1,10 @@
+Redux 쓰는이유 
+1.props 문법 귀찬을때 쓴다
+
+2.state 변경관리할 때 쓴다(상태 관리)가 용이하다
+-components들은 수정요청만이 가능하다 
+    store.js를 만들어서 관리한다
+-컴포넌트에서 state 수정요청을 하려면
+-App.js에 가서 dispatch({type : '증가'})를 만들어준다
+
+ <button onClick = {() => { dispatch({type : '증가'}) }}>더하기</button>

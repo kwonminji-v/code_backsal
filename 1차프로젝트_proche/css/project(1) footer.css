@@ -1,0 +1,72 @@
+.footer_box_title {
+
+  font-weight: 600;
+  line-height: 3em;
+  font-size: 18px;
+  font-weight: 600;
+}
+.footer_box {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 10px 0px 10px;
+}
+.footer_box li {
+  padding: 10px 5px 12px 0px;
+}
+
+.footer_box li a {
+  cursor: pointer;
+  color: black;
+}
+.page_rec {
+  display: flex;
+  align-items: center;
+  height: 20%;
+  font-size: 110%;
+  padding: 5px;
+  background-color: #313639;
+  color: white;
+}
+.page_rec:hover {
+  background-color: red;
+}
+.footer_logobox {
+  box-sizing: border-box;
+  margin-top: 10px;
+  display: flex;
+}
+.footer_logobox li a {
+  border: 1px solid white;
+  padding: 0.6vw;
+  font-size: 18pt;
+  color: white;
+  background-color: #313639;
+  display: flex;
+}
+a[title ^="insta"]:hover, a[title ^="youtu"]:hover, a[title ^="faceb"]:hover, a[title ^="lnked"]:hover, 
+a[title ^="twitt"]:hover, a[title ^="pinte"]:hover {
+    background : rgb(231, 42, 13);
+}
+footer>div>.last {
+  padding: 40px;
+  background-color: #061a25;
+  color: white;
+  width: 100%;
+}
+footer>.last>p {
+  font-size: 11pt;
+  margin-left: 30px;
+}
+.page_rec_in {
+  box-sizing: border-box;
+  display: flex;
+}
+.page_rec_in li{
+  border: 1px solid white;
+  padding: 0.6vw;
+  font-size: 18pt;
+  color: white;
+  background-color: #313639;
+  display: inline;
+  margin-bottom: 20px;
+}

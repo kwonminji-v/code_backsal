@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+    <style>
+        * {
+            color: black;
+            font-size: 12px;
+        }
+        .navbar-text li {
+            display: inline;
+        }
+        body {
+            background-color: #f0e8d9;
+        }
+    </style>
+</head>
+<body>
+<!-- 로그인 모달 창 start  -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Log-in</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <fieldset>
+                    <div class="login">
+                        <form action="#">
+                            <div class="box">
+                                <input type="text" name="id" id="id" placeholder="ID">
+                            </div>
+                            <div class="box">
+                                <input type="password" name="pass" id="pass" placeholder="PASSWORD">
+                            </div>
+                        </form>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-primary">회원가입</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 로그인 모달 창 end  -->
+
+<!-- 헤더 내비게이션 start  -->
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="bi bi-heart-fill"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">센터 소개</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="posterdog.html">입양 동물</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">입양 후기</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="게시판.html">문의 게시판</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">후원</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            연계 사이트
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.ekara.org/" target="_blank">동물권 행동 카라</a></li>
+                            <li><a class="dropdown-item" href="https://www.yongin.go.kr/pet/index.do" target="_blank">용인시 동물보호센터</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-sm btn-outline-success" type="submit">Search</button>
+                </form>
+                <span class="navbar-text" style="margin-left: 15px;">
+                    <button type="button" class="btn btn-outline-" data-bs-toggle="modal" data-bs-target="#exampleModal">로그인</button>
+                    <button type="button" class="btn btn-outline-">마이페이지</button>
+                    <button type="button" class="btn btn-outline-">회원가입</button>
+                </span>
+            </div>
+        </div>
+    </nav>
+<!-- 헤더 내비게이션 end  -->
+
+     <div class="container" style="margin: auto; margin-top: 25px; border: 1px solid red;">
+        <table class="table caption-top table-hover table-bordered">
+            <caption style="font-size: 18px; font-weight: bold;">문의 게시판</caption>
+            <thead>
+            <tr>
+                <th scope="col">글 번호</th>
+                <th scope="col">문의 항목</th>
+                <th scope="col" colspan="2">내용</th>
+                <th scope="col">이름</th>
+                <th scope="col">날짜</th>
+            </tr>
+            </thead>
+            <tbody class="table-group-divider">
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td colspan="2">Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td colspan="2">Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td >Larry the Bird</td>
+                <td colspan="2">가나다라</td>
+                <td>@twitter</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry the Bird</td>
+                <td colspan="2">가나다라</td>
+                <td>@twitter</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry the Bird</td>
+                <td colspan="2">가나다라</td>
+                <td>@twitter</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry the Bird</td>
+                <td colspan="2">가나다라</td>
+                <td>@twitter</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry the Bird</td>
+                <td colspan="2">Thornton</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

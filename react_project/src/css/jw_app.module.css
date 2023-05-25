@@ -1,0 +1,17 @@
+.container {
+    position: relative;
+    width:99vw;
+    height:auto;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    background-color:rgb(250, 250, 250);
+}
+@media(width<=1440px){
+    .container{
+        width:1440px;
+    }
+}
+a{
+    text-decoration: none !important;
+}

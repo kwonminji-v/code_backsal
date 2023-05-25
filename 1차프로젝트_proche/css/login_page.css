@@ -1,0 +1,95 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#back_img > img {
+  width: 1920px;
+  height: 1000px;
+}
+.login_box {
+  position: absolute;
+  top: 0px;
+  left: 300px;
+  background-color: white;
+  width: 450px;
+  height: 700px;
+}
+#logo {
+  float: left;
+  width: 180px;
+  height: 100px;
+  margin-left: 140px;
+}
+.clear {
+  clear: both;
+}
+.intro{
+  font-size: 45px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+ul{
+  list-style: none;
+}
+li {
+  margin-bottom: 10px;
+}
+#email {
+  width: 360px;
+  height: 30px;
+}
+#pwd {
+  width: 360px;
+  height: 30px;
+}
+#login_btn{
+  background-color: rgb(185, 12, 12);
+  color: white;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  margin: 35px 40px;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition : background 1s;
+  border: 0;
+  cursor: pointer;
+}
+.login_btn > a{
+  text-decoration: none;
+  color: white;
+}
+.divider{
+  width: 160px;
+  height: 0.1px;
+  background-color: darkgray;
+  float: left;
+  padding: 0;
+  margin-left: 22px;
+  
+}
+.divider_text{
+  width: 40px;
+  float: left;
+  margin-left: 22px;
+  color: #444444;
+  font-size: 15px;
+}
+.signup {
+  margin: 20px 0 20px 20px;
+}
+.signup > a{
+  color: black;
+  transition: color 0.5s;
+}
+.signup > a:hover{
+  color: rgb(243, 88, 88);
+}
+#login_btn:hover {
+  background-color: rgb(141, 5, 5);
+}
+.email_error, .pwd_error {
+  display: none;
+  color: red;
+}

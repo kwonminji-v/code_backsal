@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 페이지</title>
+  <link rel="stylesheet" href="../css/login_page.css">
+</head>
+<body>
+  <div id="back_img">
+    <img src="../img/992turbo.jpg" alt="background">
+  </div>
+  
+    <div id="login_form">
+      <div class="login_box">
+        <img id="logo" src="../img/porsche-logo.jpg" alt="logo">
+        <div class="clear"></div>
+        <p class="intro">반갑습니다.</p>
+        <ul>
+          <li>
+            <label for="email">Porsche ID(이메일 주소)</label>
+          </li>
+          <li>
+            <input type="email" id="email" required autofocus>
+          </li>
+          <li class="email_error">아이디(이메일)을 입력해주세요.</li>
+          <li>
+            <label for="pwd">Porsche password</label>
+          </li>
+          <li>
+            <input type="password" id="pwd" required>
+          </li>
+          <li class="pwd_error">비밀번호를 입력해주세요.</li>
+        </ul>
+        <button type="submit" id="login_btn">〉&nbsp; 계속 진행하려면 누르세요</button>
+        <hr class="divider"><span class="divider_text">또는</span><hr class="divider">
+        <div class="clear"></div>
+        <div class="signup"><a href="signup_page.html" target="_self">지금 등록하세요,</a><span> Porsche의 디지털 세상을 알아보세요.</span></div>
+      </div>
+    </div>
+
+<script src="../js/login_page.js"></script>
+</body>
+</html>

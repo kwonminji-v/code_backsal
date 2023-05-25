@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+    <style>
+        * {
+            color: black;
+            font-size: 12px;
+        }
+
+        .card_box {
+            display: flex;
+        }
+
+        .navbar-text li {
+            display: inline;
+        }
+        body {
+            background-color: #f0e8d9;
+        }
+    </style>
+</head>
+
+<body>
+<!-- 로그인 모달 창 start  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Log-in</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <fieldset>
+                        <div class="login">
+                            <form action="#">
+                                <div class="box">
+                                    <input type="text" name="id" id="id" placeholder="ID">
+                                </div>
+                                <div class="box">
+                                    <input type="password" name="pass" id="pass" placeholder="PASSWORD">
+                                </div>
+                            </form>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-primary">회원가입</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 로그인 모달 창 end  -->
+
+<!-- 헤더 내비게이션 start  -->
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="bi bi-heart-fill"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">센터 소개</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="posterdog.html">입양 동물</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">입양 후기</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" a href="게시판.html">문의 게시판</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">후원</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">연계 사이트</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.ekara.org/" target="_blank" >동물권 행동 카라</a></li>
+                            <li><a class="dropdown-item" href="https://www.yongin.go.kr/pet/index.do" target="_blank">용인시 동물보호센터</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-sm btn-outline-success" type="submit">Search</button>
+                </form>
+                <span class="navbar-text" style="margin-left: 15px;">
+                    <button type="button" class="btn btn-outline-" data-bs-toggle="modal" data-bs-target="#exampleModal">로그인</button>
+                    <button type="button" class="btn btn-outline-">마이페이지</button>
+                    <button type="button" class="btn btn-outline-">회원가입</button>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!-- 헤더 내비게이션 end  -->
+
+    <!-- main 슬라이드 start  -->
+    <div class="container">
+        <div class="container" style="margin: 100px auto; border: 5px solid red;">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="./068a4c8777681.jpg" class="d-block w-100 img-thumbnail" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./c026461721a57836e71f440d84c53db4.jpg" class="d-block w-100 img-thumbnail" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./c026461721a57836e71f440d84c53db4.jpg" class="d-block w-100 img-thumbnail" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- main 슬라이드 end  -->
+
+        <div class="card_box px-4 text-center">
+            <div class="card img-thumbnail" style="width: 18rem;">
+                <img src="시고르자브종-콧물.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">귀여운 동물들</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="068a4c8777681.jpg" class="card-img-top img-thumbnail" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">귀여운 동물들</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img.jpg" class="card-img-top img-thumbnail" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">귀여운 동물들</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="1489737117788.png" class="card-img-top img-thumbnail" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">귀여운 동물들</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticeboard</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../img/dog_icon_mini.png" rel="icon">
+    <link href="../img/dog_icon_big.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/makemj_.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 65vw;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #noticepage_1 {
+            z-index: 10;
+            display: block;
+        }
+
+        .navpagebtn_box {
+            position: absolute;
+            top: 77%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        tbody tr td a {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 회원가입 모달 창 start  -->
+    <div class="modal fade" id="signup_Modal" tabindex="-1" aria-labelledby="signup_ModalLabel" aria-hidden="true"
+        style="font-family: jua;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #ffc003;">
+                    <h1 class="modal-title fs-5" id="signup_ModalLabel">회원 가입</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="container">
+                    <div class="input-form-backgroud row">
+                        <div class="input-form col-md-12 mx-auto">
+                            <form class="validation-form" novalidate>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name">이름</label>
+                                        <input type="text" class="form-control" id="signup_name" placeholder="" value=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            이름을 입력해주세요.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="nickname">별명</label>
+                                        <input type="text" class="form-control" id="signup_nickname" placeholder=""
+                                            value="" required>
+                                        <div class="invalid-feedback">
+                                            별명을 입력해주세요.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-3" id="phonenumber_box">
+                                    <label for="phonenumber">핸드폰 번호</label>
+                                    <div
+                                        style="display: flex; width: 20vw; height: 4vh; justify-content:center; align-items: baseline;">
+                                        <input type="text" style=" margin-right: 10px;" class="form-control"
+                                            id="phonenumber_1" maxlength="3" required> <span> ㅡ </span>
+                                        <input type="text" style=" margin-left: 10px; margin-right: 10px;"
+                                            class="form-control" id="phonenumber_2" maxlength="4" required> <span> ㅡ
+                                        </span>
+                                        <input type="text" style=" margin-left: 10px;" class="form-control"
+                                            id="phonenumber_3" maxlength="4" required>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        핸드폰 번호를 입력해주세요.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email">이메일</label>
+                                    <input type="email" class="form-control" id="signup_email"
+                                        placeholder="email@example.com" required>
+                                    <div class="invalid-feedback">
+                                        이메일을 입력해주세요.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="address">주소</label>
+                                    <input type="text" class="form-control" id="signup_address" placeholder=" "
+                                        required>
+                                    <div class="invalid-feedback">
+                                        주소를 입력해주세요.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="address2">상세주소<span class="text-muted">&nbsp;(필수 아님)</span></label>
+                                    <input type="text" class="form-control" id="signup_address2"
+                                        placeholder="상세주소를 입력해주세요.">
+                                </div>
+
+                                <hr class="mb-4">
+                                <div class="custom-control cusFtom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="aggrement" required>
+                                    <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
+                                </div>
+                                <div class="snsbtn_box" style="display: flex; margin-top: 15px;">
+                                    <div class="row">
+                                        <div class="col-md-8 mb-3">
+                                            <div class="naver_btn" style="padding-right: 10px;">
+                                                <a
+                                                    href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com"><img
+                                                        src="../img/icon_naver.png"
+                                                        style="float: left; vertical-align: middle; margin-left: 3px; margin-bottom: 3px; max-width: 35px;"
+                                                        alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-8 mb-3">
+                                            <div class="facebook_btn" style="padding-right: 10px;">
+                                                <a href="https://ko-kr.facebook.com/"><img
+                                                        src="../img/icon_facebook.png"
+                                                        style="float: left; vertical-align: middle; margin-left: 3px; margin-bottom: 3px; max-width: 35px;"
+                                                        alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-8 mb-3">
+                                            <div class="kakao_btn" style="padding-right: 10px;">
+                                                <a
+                                                    href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fproxy%3DeasyXDM_Kakao_to79ylylayn_provider%26ka%3Dsdk%252F1.43.1%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fepis.or.kr%26origin%3Dhttps%253A%252F%252Fepis.or.kr%26response_type%3Dcode%26redirect_uri%3Dkakaojs%26state%3Db5id7l01ypr6odkvnm9uqi%26through_account%3Dtrue%26client_id%3D950f3ae1f2f550e5ba7ff7d9fffc7781&talk_login=hidden#login">
+                                                    <img src="../img/icon_kakao.png"
+                                                        style="float: left; vertical-align: middle; margin-left: 3px; margin-bottom: 3px; max-width: 35px;"
+                                                        alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="mb-4"></div>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 회원가입 모달 창 end  -->
+    <!-- 로그인 모달 창 start  -->
+    <div class="modal fade" style="font-family: jua;" id="login_modal" data-bs-backdrop="static"
+        data-bs-keyboard="false" tabindex="-1" aria-labelledby="login_modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #ffc003;">
+                    <h1 class="modal-title fs-5" id="login_modalLabel">Log-in</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="form-check form-check-inline" style="margin-top: 15px;">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">로그인 상태 유지하기</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-primary">로그인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 로그인 모달 창 end  -->
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center" style="justify-content: space-evenly;">
+
+            <a href="../index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+                <h1 style="font-size: 20px;">도담도담<span>.</span></h1>
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#about">센터 소개</a></li>
+                    <li><a href="#find_dog">실종 동물 찾기</a></li>
+                    <li><a href="#foster">입양 동물</a></li>
+                    <li><a href="#volunteer">자원봉사 & 후원 신청</a></li>
+                    <li><a href="#trainer">훈련사 소개</a></li>
+                    <li><a href="noticeboard.html">문의게시판</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="dropdown"><a href="#"><span>연계 사이트</span><i
+                                class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul>
+                            <li><a href="https://www.ekara.org/" target="_blank">동물권 행동 카라</a></li>
+                            <li><a href="https://www.yongin.go.kr/pet/index.do" target="_blank">용인시 동물 보호센터</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="navbar-text-box">
+            <span class="navbar-text" style="margin-left: 15px;">
+                <button type="button" id="navlogin_btn" class="btn btn-outline-" data-bs-toggle="modal"
+                    data-bs-target="#login_modal">로그인</button>
+                <button type="button" id="navmypage_btn" class="btn btn-outline-">마이페이지</button>
+                <button type="button" id="navlogin_btn" class="btn btn-outline-" data-bs-toggle="modal"
+                    data-bs-target="#signup_Modal">회원가입</button>
+            </span>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        </div>
+
+    </header>
+    <!-- End Header -->
+    <main>
+        <div class="notice_header"
+            style="justify-content: space-around; display: flex; align-items: center; background-color: #eee; margin-top: 75px; height: 10vh;">
+            <h1 class="notice_header" style="font-size: 40px; margin: 0; color: black; "> What's Your Question ? </h1>
+        </div>
+        <div>
+            <div class="card" id="noticepage_1">
+                <div class="card-body">
+                    <table class="table caption-top table-hover table-bordered">
+                        <div class="table-text-box">
+                            <span style="position: absolute; right: 35px;">
+                                <button type="button" class="btn btn-outline-"
+                                    onclick="location.href = 'writepage.html'" style="font-size: 12px;">글쓰기</button>
+                                <button type="button" class="btn btn-outline-" style="font-size: 12px;">검색</button>
+                            </span>
+                        </div>
+                        <caption style="font-size: 18px; font-weight: bold;">게시판</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 80px;">글 번호</th>
+                                <th scope="col" style="width: 150px;">문의 항목</th>
+                                <th scope="col" colspan="2" style="width: 180px;">제목</th>
+                                <th scope="col" style="width: 130px;">이름</th>
+                                <th scope="col" style="width: 130px;">조회수</th>
+                                <th scope="col" style="width: 130px;">작성 일시</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>반려동물 찾기</td>
+                                <td colspan="2"><a href="#">판돌이를 찾아주세요</a></td>
+                                <td>이채록</td>
+                                <td>320회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>유기동물 발견</td>
+                                <td colspan="2"><a href="#">용인 기흥에서 목줄을 한 진돗개가 돌아다니고 있어요</a></td>
+                                <td>문동은</td>
+                                <td>121회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>반려동물 찾기</td>
+                                <td colspan="2"><a href="#">금학천에서 잃어버린 말티즈를 찾고있어요</a></td>
+                                <td>주여정</td>
+                                <td>156회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>학대자 의심 신고</td>
+                                <td colspan="2"><a href="#">우리동네 골목에서 매일 밤 강아지가 낑낑거리면서 짖어요 ㅠㅠ</a></td>
+                                <td>박지민</td>
+                                <td>653회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>자유 질문</td>
+                                <td colspan="2"><a href="#">시츄가 제일 좋아하는 간식이 뭐에요?</a></td>
+                                <td>박정아</td>
+                                <td>65회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>자유 질문</td>
+                                <td colspan="2"><a href="#">입양과 관련해서 필요한 서류등이 있나요?</a></td>
+                                <td>김요한</td>
+                                <td>26회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>반려동물 입양</td>
+                                <td colspan="2"><a href="#">용인시 보호소에서 입양하고 싶은 강아지가 있어요!</a></td>
+                                <td>권민지</td>
+                                <td>251회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card" id="noticepage_2">
+                <div class="card-body">
+                    <table class="table caption-top table-hover table-bordered">
+                        <div class="table-text-box">
+                            <span style="position: absolute; right: 35px;">
+                                <button type="button" class="btn btn-outline-"
+                                    onclick="location.href = 'writepage.html'" style="font-size: 12px;">글쓰기</button>
+                                <button type="button" class="btn btn-outline-" style="font-size: 12px;">검색</button>
+                            </span>
+                        </div>
+                        <caption style="font-size: 18px; font-weight: bold;">게시판</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 80px;">글 번호</th>
+                                <th scope="col" style="width: 150px;">문의 항목</th>
+                                <th scope="col" colspan="2" style="width: 180px;">제목</th>
+                                <th scope="col" style="width: 130px;">이름</th>
+                                <th scope="col" style="width: 130px;">조회수</th>
+                                <th scope="col" style="width: 130px;">작성 일시</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>반려동물 입양</td>
+                                <td colspan="2"><a href="#">강아지를 입양하고 싶은데 어디에 문의하면 되나요?</a></td>
+                                <td>김솔비</td>
+                                <td>120회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>자유 질문</td>
+                                <td colspan="2"><a href="#">아기 강아지들은 하루에 몇시간 정도 자나요?</a></td>
+                                <td>조정원</td>
+                                <td>151회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>자유 질문</td>
+                                <td colspan="2"><a href="#">사료 추천해주세요</a></td>
+                                <td>김자겸</td>
+                                <td>329회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>반려동물 찾기</td>
+                                <td colspan="2"><a href="#">밍크가 사라졌어요 금학천에서 잃어버렸습니다.</a></td>
+                                <td>박가원</td>
+                                <td>120회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>자유 질문</td>
+                                <td colspan="2"><a href="#">동물 병원 추천해주세요 용인 성남시에 있으면 좋아요</a></td>
+                                <td>김희진</td>
+                                <td>565회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>반려동물 입양</td>
+                                <td colspan="2"><a href="#">서울시 동물 보호소에서 반려동물 입양 시 필요한 준비물이 있나요?</a></td>
+                                <td>문성민</td>
+                                <td>26회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>반려동물 입양</td>
+                                <td colspan="2"><a href="#">저희 집에 이미 강아지가 있는데, 입양을 하게된다면 어떤 점을 주의해야 하나요?</a></td>
+                                <td>김연경</td>
+                                <td>251회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card" id="noticepage_3">
+                <div class="card-body">
+                    <table class="table caption-top table-hover table-bordered">
+                        <div class="table-text-box">
+                            <span style="position: absolute; right: 35px;">
+                                <button type="button" class="btn btn-outline-"
+                                    onclick="location.href = 'writepage.html'" style="font-size: 12px;">글쓰기</button>
+                                <button type="button" class="btn btn-outline-" style="font-size: 12px;">검색</button>
+                            </span>
+                        </div>
+                        <caption style="font-size: 18px; font-weight: bold;">게시판</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 80px;">글 번호</th>
+                                <th scope="col" style="width: 150px;">문의 항목</th>
+                                <th scope="col" colspan="2" style="width: 180px;">제목</th>
+                                <th scope="col" style="width: 130px;">이름</th>
+                                <th scope="col" style="width: 130px;">조회수</th>
+                                <th scope="col" style="width: 130px;">작성 일시</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>학대자 의심신고</td>
+                                <td colspan="2"><a href="#"><a href="#">저희 동네에 강아지 때리는 아저씨가 있어요 </a></td> <!-- min width 안 줄여지게 -->
+                                <td>전재준</td>
+                                <td>532회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>유기동물 발견</td>
+                                <td colspan="2"><a href="#">경안천에 목줄있는 말티즈가 돌아다니고 있어요</a></td>
+                                <td>김소은</td>
+                                <td>121회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>반려동물 찾기</td>
+                                <td colspan="2"><a href="#">금학천에서 잃어버린 말티즈를 찾고있어요</a></td>
+                                <td>주여정</td>
+                                <td>156회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>학대자 의심 신고</td>
+                                <td colspan="2"><a href="#">우리동네 골목에서 매일 밤 강아지가 낑낑거리면서 짖어요 ㅠㅠ</a></td>
+                                <td>박지민</td>
+                                <td>653회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>자유 질문</td>
+                                <td colspan="2"><a href="#">시츄가 제일 좋아하는 간식이 뭐에요?</a></td>
+                                <td>박정아</td>
+                                <td>65회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>반려동물 입양</td>
+                                <td colspan="2"><a href="#">입양과 관련해서 필요한 서류등이 있나요?</a></td>
+                                <td>문성민</td>
+                                <td>26회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>반려동물 입양</td>
+                                <td colspan="2"><a href="#">저희 집에 이미 강아지가 있는데, 입양을 하게된다면 어떤 점을 주의해야 하나요?</a></td>
+                                <td>김연경</td>
+                                <td>251회</td>
+                                <td>2023-03-23</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <nav aria-label="Page navigation" class=navpagebtn_box style=" bottom: 0px;">
+                <button class="noticepage_btn">◀</button>
+                <button class="noticepage_btn">1</button>
+                <button class="noticepage_btn">2</button>
+                <button class="noticepage_btn">3</button>
+                <button class="noticepage_btn">▶</button>
+            </nav>
+        </div>
+
+    </main>
+    <script>
+
+        let noticepage_btn = document.querySelectorAll(".noticepage_btn")
+
+        noticepage_btn.forEach(function () {
+            noticepage_btn[1].addEventListener("click", function () {
+                noticepage_1.style.display = "block";
+                noticepage_2.style.display = "none"
+                noticepage_3.style.display = "none"
+            })
+            noticepage_btn[2].addEventListener("click", function () {
+                noticepage_1.style.display = "none";
+                noticepage_2.style.display = "block"
+                noticepage_3.style.display = "none"
+            })
+            noticepage_btn[3].addEventListener("click", function () {
+                noticepage_1.style.display = "none"
+                noticepage_2.style.display = "none"
+                noticepage_3.style.display = "block";
+            })
+        })
+        // noticepage_btn.forEach(function () {
+        //     noticepage_btn[1].addEventListener("click", function () {
+        //         noticepage_1.style.display = "block";
+        //         noticepage_2.style.display = "none"
+        //         noticepage_3.style.display = "none"
+        //     })
+        //     noticepage_btn[2].addEventListener("click", function () {
+        //         noticepage_1.style.display = "none";
+        //         noticepage_2.style.display = "block"
+        //         noticepage_3.style.display = "none"
+        //     })
+        //     noticepage_btn[3].addEventListener("click", function () {
+        //         noticepage_1.style.display = "none"
+        //         noticepage_2.style.display = "none"
+        //         noticepage_3.style.display = "block";
+        //     })
+        // })
+        console.log(noticepage_btn);
+    </script>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/"></script>
+    <script src="../js/signup_login.js"></script>
+
+    <!-- 메인 JS 파일 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/signup_login.js"></script>
+</body>
+
+</html>

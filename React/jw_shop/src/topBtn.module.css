@@ -1,0 +1,40 @@
+.topBtnArea {
+    position: absolute;
+    margin-left:calc(100% - 80px);
+    width: 40px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    line-height: 10px;
+    font-weight: bold;
+}
+
+.topBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(167, 199, 248);
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    z-index: 11;
+    font-weight: bold;
+    color: white;
+
+}
+.topBtn:hover{
+    animation: topBtnHover 1s infinite;
+    animation-fill-mode: both;
+    cursor: pointer;
+}
+@keyframes topBtnHover {
+    0%{}
+    25%{margin-top: -8px;}
+    50%{margin-top: 0px;}
+    50%{margin-top: 8px;}
+    100%{margin-top: 0px;}
+
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+
+<head> </head>
+
+<body>
+  <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+
+  function Btn({ text, fontSize }) {
+    console.log(text, "렌더링 되었음")
+    return (
+      <button
+        style={{
+          backgroundColor: "tomato",
+          color: "white",
+          padding: "10px 20px",
+          border: 0,
+          borderRadius: 10,
+          fontSize,
+        }}>{text}</button>
+    )
+  }
+
+  function App() {
+
+    return (
+      <div>
+
+        <Btn text="변화를 저장하기" fontSize={18} />
+        <Btn text={18} fontSize={"계속한다"} />
+      </div>
+    );
+  }
+
+  ReactDOM.render(<App />, root);
+</script>
+
+</html>
+
+<!-- 
+props의 Type
+string 타입에 number를 작성하는 실수 or 반대로 number를 전달해야하는 props에 string을 전달할 경우, 구문에 어긋나진않지만 에러가 발생한다.
+작성자가 어떤 값을 전달하고자 하는 지 React.js는 알지 못하지만 PropTypes라는 패키지를 이용하여 어떤 type의 prop을 받고있는지 체크가 가능하다.
+ -->
+
+
+
+
+<!-- 
+onClick이 이벤트이지만 이벤트 리스너로 추가된 것이 아닌 단순한 props으로 작성되서 입력되었음. 
+
+
+App Component는 root div를 그려주는 역할
+가장 중요한 컴포넌트이다. App 컴포넌트안에는 많은 다른 컴포넌트들을 렌더링 할 수 있다.
+  -->
+
+
+<!-- 
+리액트를 import했기 때문에 createElement function을 가진 리액트 object에 접근 가능
+const span 그러나 createElement(“span”) 은 반드시 생성하고자 하는 HTML 태그와 똑같아야함
+
+render - 사용자들에게 script에 작성된 요소들을 보여지게 만들어준다.
+React JS - 어플리케이션이 아주 인터랙티브하도록 만들어주는 library. 엔진과 같다.
+React-dom - library 또는 package. 모든 react element들을 HTML body에 둘 수 있도록 해줌.
+ReactDOM.render() - render의 의미는 react element를 가지고 HTML로 만들어 배치한다는 것. 즉, 사용자에게 보여준다는 의미
+ReactDOM.render(span, span이 가야할 위치)
+-> 그래서 보통 body에 id=“root” 만들어서 span을 root 안에 두라고 함
+
+React.createElement("span", {span의 property}, “span의 내용”)
+-> property는 class name, id도 가능 style도 가능
+
+바닐라JS는 HTML -> JS 순서
+리액트는 JS -> HTML 순서
+
+JS가 element를 생성하고 React JS가 그것을 HTML로 번역하는 것
+React JS는 업데이트 해야 하는 HTML을 업데이트 할 수 있음
+
+ -->
+
+<!-- 
+JSX에서는 label의 태그를 작성할 때, label for과 같은 문법으로 사용하지 않는다. label for을 자바스크립트 에러로 JSX에서는 사용이 안된다. 
+HTML에서는 class를 부여할 때 class라고 적지만 React에선 className을 사용하는 것과 같은 맥락이다.
+
+const onChange = (event) => { setMinutes(event.target.value); }
+내가 입력한 input value의 값을 바탕으로 component를 업데이트 해주고 있다.
+state와 setState가 같이 작성되어야 하는 이유는 초깃값을 설정해주고 event가 발생했을 때, 초깃값으로 설정된 state값을 업데이트 해주고 UI에 보여줘야 하기 때문이다.
+  -->

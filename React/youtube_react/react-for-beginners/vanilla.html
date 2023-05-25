@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+  <span>클릭의 갯수 : </span>
+  <button id="btn">클릭하세요</button>
+</body>
+<script>
+  let counter = 0;
+
+  const button = document.getElementById("btn");
+  const span = document.querySelector("span");
+  /*  ↓ js에서의 span을 react에선 아래와 같이 작성됨
+const root = document.getElementById("root");
+const span = React.createElement( "span", {id: "dog"}, "Hello I'm a span" ); */
+  function hadleClick() {
+    counter += 1;
+    span.innerText = `클릭의 갯수 : ${counter}`;
+  }
+  
+  button.addEventListener("click", hadleClick);
+</script>
+{ index === "0" ? <MinutesToHours /> : null }
+</html>
+
+<!-- 54
+
+1. let 변수에 선언된 counter의 값이 클릭 시 증가되며 변경되긴 하지만, HTML자체가 새로고침되진 않기때문에 페이지상에서의 숫자가 변하진 않음 
+
+-->

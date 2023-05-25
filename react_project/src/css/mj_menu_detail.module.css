@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: kakao;
+}
+
+@font-face {
+    font-family: kakao;
+    src: url(../font/KakaoOTFRegular.otf);
+}
+
+.detail_box {
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: baseline;
+}
+
+.menu_btn_box {
+    height: 80px;
+    background-color: #DA281C;
+    display: flex;
+    justify-content: space-around;
+    border: none;
+    align-items: center;
+}
+
+.menu_btn_box button {
+    background-color: #DA281C;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 56px;
+    cursor: pointer;
+}
+
+.side_box {
+    position: sticky;
+    top: 58px;
+    width: 335px;
+    height: 95vh;
+    margin-left: 50px;
+}
+
+.side_detailcontent {
+    width: 100%;
+    height: 35%;
+    padding: 32px 25px;
+    border-radius: 16px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.side_addbtn {
+    font-size: 16px;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #ebebeb;
+    margin: 30px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 54px;
+    border-radius: 8px;
+    background: transparent;
+    color: #000;
+}
+
+.side_addbtn:hover {
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+.side_detail_text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.side_optionbtn {
+    color: #888;
+    font-size: 14px;
+    letter-spacing: -.45px;
+    font-weight: 300;
+    margin-bottom: 18px;
+    margin-top: 40px;
+    border: none;
+    background: none;
+}
+
+.percent {
+    color: rgb(255, 51, 153);
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+.saleprice {
+    font-size: 12px;
+    text-decoration: line-through;
+    color: #AAAAAA;
+}
+
+.side_detailcontent img {
+    width: 20px;
+    height: 20px;
+    margin: 9px 0 0 5px;
+}
+
+.side_detailbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    background: #ffffff;
+    width: 100%;
+    height: 8%;
+    margin-top: 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.side_detailbtn:hover {
+    cursor: pointer;
+    box-shadow: none;
+}

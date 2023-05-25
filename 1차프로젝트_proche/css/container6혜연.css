@@ -1,0 +1,23 @@
+#container6 {
+    width: 99vw;
+    height: 100vh;
+    position: relative;  
+}
+
+
+#container6 >#text{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color:white;
+    font-weight: bold;
+    font-size: 40px;
+} 
+#container6 #text-inner {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    margin-left: -27px;
+}
+#container6 #text-inner div{ border-left: 1px solid white;
+padding-left: 20px;}

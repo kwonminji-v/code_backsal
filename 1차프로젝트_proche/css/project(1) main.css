@@ -1,0 +1,73 @@
+li { list-style: none;}
+.slide_wrapper {
+    position: relative;
+    margin: 0 auto;
+    height: 853px;
+    overflow: hidden;
+    margin-top: 16px;
+}
+.slides {
+    position: absolute;
+    left: 0; top: 0;
+}
+.slides.animated {
+    transition: 0.7s ease-out;
+}
+.slides li {
+    overflow-y: hidden;
+    width: 1920px;
+    height: 900px;
+    float: left;
+}
+.prev, .next {
+    position: absolute;
+    color: red;
+    font-size: 40pt;
+    padding: 15px;
+    font-weight: bold;
+}
+.prev {
+    cursor: pointer;
+    z-index: 10;
+    bottom: 350px;
+}
+.next {
+    cursor: pointer;
+    z-index: 10;
+    top: 400px;
+    right: 0px;
+}
+img {
+    overflow: hidden;
+}
+.pagination_box {
+    vertical-align: middle;
+    display: flex;
+    bottom: px;
+    left: 800px;
+    position: absolute;
+}
+.page_radio {
+    width: 2vw;
+    vertical-align: middle;
+}
+.page_radio:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 max(1px, 0.1em) gray;
+}
+/* .pagination_box [type = "radio"] {
+    appearance: none;
+    border: max(1px, 0.1em) solid gray;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    margin: 15px;
+    transition: border 0.5s ease-in-out;
+} */
+/* .pagination_box [type = "radio"]:checked {
+    border: 0.2em solid red;
+} */
+.pagination_box [type = "radio"]:focus-visible {
+    outline-offset: max(1px, 0.1em);
+    outline: max(1px, 0.1em) dotted tomato;
+}

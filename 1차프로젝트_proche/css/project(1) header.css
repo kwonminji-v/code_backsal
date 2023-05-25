@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* 길이 계산을 편하게 하기위함. box-sizing에 관한 설명은 아래 링크를 참고해주세요 */
+}
+
+a {
+  text-decoration: none;
+  /* 기본 밑줄을 제거합니다 */
+}
+
+header {
+  width: 100vw;
+  height: 85px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  /* 하위 요소들 수직 가운데정렬 */
+  background-color: white;
+  z-index: 5;
+  align-items: baseline;
+}
+
+.logo_img {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  border: 1px solid black;
+  margin-left: 95px;
+  width: 170px;
+  height: 141px;
+}
+
+.links {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  margin-left: 300px;
+}
+
+.main_menu {
+  display: flex;
+  font-weight: bold;
+  color: black;
+  font-size: 15px;
+  padding: 0px 0px 26px 51px;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  align-items: flex-end;
+}
+
+.icons {
+  display: flex;
+  padding-left: 350px;
+}
+
+.icons a {
+  display: flex;
+  font-size: 20px;
+  color: black;
+  padding: 20px;
+  align-items: center;
+  text-underline-offset: 0.5rem;
+}
+
+input {
+  border: none;
+}
+
+#add_menu {
+  font-size: 20pt;
+  padding: 10px;
+}

@@ -1,0 +1,368 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#header_box {
+  width: 99vw;
+  height: 13vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+.logo {
+  background: url("../img/porsche-mark.jpeg") 50% 70% no-repeat;
+  background-size: contain;
+  width: 160px;
+  height: 200px;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  z-index:3;
+  position: absolute;
+  left: 5%;
+  /* position: absolute; */
+}
+.menuBar{
+  font-size: 18px;
+}
+#container1 {
+  width: 99vw;
+  height: 100vh;
+  position: relative;
+}
+
+#container1 .img{
+  background: url('../img/porsche_coupe.jpeg') center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  
+ 
+}
+#container1 #lower_text_box{
+  color: white;
+  font-size: 20px;
+  width: 50vw;
+  height: 30vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  margin-top: 300px;
+  margin-left: 400px;
+  
+}
+.spec_intro{
+  width: 50vw;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 72%;
+  left: 22%;
+}
+.spec{
+  margin: 30px 60px;
+}
+span{
+  font-size: 15px;
+  font-weight: normal;
+}
+#upper_text_box {
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  width: 40vw;
+  display: flex;
+  flex-flow: column;
+  margin-left: 500px;
+}
+.model_name > p {
+  line-height: 45px;
+  position: absolute;
+  top: 12%; 
+  left: 40%;
+}
+.body_type{
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  position: absolute;
+  top: 3%;
+  left: 40%;
+
+}
+.body_type > p {
+  margin: 0 20px;
+  font-size: 15px;
+}
+#quick_menu{
+  width: 50vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  position: absolute;
+  top: 85%;
+  left: 22%;
+}
+#quick_menu > a {
+  font-size: 18px;
+  color: white;
+  padding: 10px 25px;
+  border: 1px solid white;
+  margin: 0 5px;
+  text-decoration: none;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+#quick_menu > a:hover {
+  border: 1px solid red;
+  color: red;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+  top: 100%;
+  position: fixed;
+  left: 0;
+  background-color: white;
+}
+
+
+.container.modal-open .modal {
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+.close-modal {
+  text-decoration: none;
+  background-color: red;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 15px 20px 15px;
+  color: white;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  vertical-align:middle;
+  float: right;
+  margin-right: 300px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #container1{
+    width:99vw;
+    height:100vh;
+    position: relative;
+    
+}
+#container1 >main{
+    width:100%;
+    height:90%;
+    background-image: url('porsche_coupe.jpeg');
+    background-size: cover;
+    background-position: center center;
+    display:flex;
+    justify-content: center;
+     
+}
+
+#container1 >header{
+    width:100%;
+    display:flex;
+    height:10%;
+    justify-content : 가로축 기준  
+       align-items : 세로축 기준
+    justify-content: end;
+    align-items: center;
+    
+}
+media (조건)을 활용하여 픽셀의 값에 따라서 보이는 화면을 다르게 할 수 있다.
+@media (max-width:800px){
+    #list{
+        display:none;
+    }
+} */
+/* 로고 부분
+#logo {
+    margin: 0px 0px 0px 15vw;
+    z-index:3;
+    position: absolute;
+    border: 1px solid rgb(163, 163, 163);
+    width:150px;
+    height: 120px;
+
+}
+#logo img{
+    width:100%;
+    height:100%;
+    font-size:15px;
+}
+#container1 section{
+    
+    width:70%;
+    height:100%;
+    section 하위 요소들의 text는 전부 가운데 정렬이 기본이 된다.
+    text-align: center;
+    position:relative;
+
+}
+section #model_name{
+    display:inline-flex;
+    width:30%;
+    margin-top:50px;
+    height:20px;
+    justify-content: space-between;
+    min-width: 190px;
+}
+#model_name > a{
+    font-size:15px;
+    color:white;
+}
+section #car_name{
+    margin-top : 50px;
+
+}
+#car_name #p2{
+    font-size:40px;
+    font-weight:700;
+}
+리스트 버튼
+section #list_btn{
+    
+    margin-top:6vh;
+    display:inline-flex;
+    width:70%;
+    height:10%;
+    justify-content: space-between;
+
+}
+#list_btn a{
+    color:white;
+}
+#list_btn #go_spec{
+    display:flex;
+    width:25%;
+    border:1px white solid;
+    justify-content: center;
+    align-items: center;
+    min-width:72px;
+
+}
+#go_spec:hover{
+    cursor: pointer;
+    animation:list_btnChange 0.5s;
+    animation-fill-mode: both;
+}
+
+#list_btn #make_porsche{
+    display:flex;
+    width:40%;
+    border:1px white solid;
+    justify-content: center;
+    align-items: center;
+    min-width:160px;
+}
+#make_porsche:hover{
+    cursor: pointer;
+    animation:list_btnChange 0.5s;
+    animation-fill-mode: both;
+}
+#list_btn #compare{
+    display:flex;
+    width:25%;
+    border:1px white solid;
+    justify-content: center;
+    align-items: center;
+    min-width:72px;
+    
+
+}
+#compare:hover{
+    cursor: pointer;
+    animation:list_btnChange 0.5s;
+    animation-fill-mode: both;
+}
+@keyframes list_btnChange{
+    from{}
+    to{color:red;
+        border:1px red solid}
+}
+display:inline-flex 는 inline + flex으로 flex(부모 요소)로 부터 자식 요소들을 가운데 일정하게
+정렬하기 쉽지만 flex의 부모 요소로 부터 가운데 정렬은 보통 inline block를 자식요소에 부여해서 정렬하는데
+이미 flex로 부여해서 불가능하다 이를 inline-flex로 해결할 수 있다.
+
+파워 & 스피드
+section #text_speed{
+    position: absolute;
+    top : 35%;
+    left: -10%;
+    width:100%;
+    height:10%;
+    display:inline-flex;
+    padding:30vh 0px 0px 0px ; 
+           
+}
+#text_speed #power{
+    width:30%;
+    height:100%;  
+    min-width:170px;
+}
+#text_speed #accleration{
+    width:40%;
+    height:100%; 
+    min-width:220px;
+}
+#text_speed #topSpeed{
+    width:30%;
+    height:100%; 
+    min-width:170px;
+}
+text-speed의 첫번째 문자열 폰트스타일
+.p1{
+    font-size:20px;
+    font-weight: 700;
+}
+#menu_window{
+    background-color: white;
+    margin-left:0px 0px 0px 500px;
+    height:100%;
+    right:0.1px;
+    position:absolute;
+} 

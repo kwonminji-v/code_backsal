@@ -1,0 +1,16 @@
+.mainDiv{
+    width:100vw;
+}
+.blank{
+    width:100vw;
+    height:10vw;
+    background-color: black;
+}
+@media(width<=500px){
+    .mainDiv{
+        width:500px;
+    }
+    .blank{
+        width:500px;
+    }
+}

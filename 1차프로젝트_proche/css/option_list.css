@@ -1,0 +1,72 @@
+.disappear_box [id *= "_box"]{
+    margin-top:5px;
+    width:89.5%; 
+    height:auto;
+    display:none;
+    
+}
+[id*="_box"]{
+    font-size:14px;
+    font-weight:100;
+}
+/* 각 옵션 크기 */
+ [id*="_box"] > div > [id^="i"] {
+    width:60px;
+    height:60px;
+    display:inline-block; 
+    z-index:-1;
+    margin: 20px 0px 0px;  
+}
+
+/* 옵션 별 이름과 가격이 나오는 구역 */
+.equip_val1{
+    height:15px;
+    text-align: left;
+}
+.equip_val2{
+    height:15px;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.mycar_option{
+    margin-top: 20px;
+    width:100%;
+    height:auto;
+    text-align:left;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    padding-bottom: 10px;
+}
+/* 색상 옵션은 명확하게 보이기 위해 border설정 */
+.group1{
+    border:1px solid rgba(0, 0, 0, 0.281);
+}
+/* 옵션 선택 시 확대되는 효과 */
+.group1:hover{
+    transform:scale(1.1);
+    /* box-shadow : x-offset y-offset blur spread color inner */
+    box-shadow: 0px 0px 3px 1px rgb(34, 34, 34) ;
+
+}
+.group2:hover{
+    transform:scale(1.2);
+}
+#exterior_colour_box{}    
+#wheels_box{}
+#wheels_box img{
+    width:100%;
+    height:100%;
+}
+#wheels_box  [id^="i"]{
+    margin:10px;
+}
+#painted_wheels_box{}
+#wheel_accessories_box{}
+#interior_box{}
+#seats_box{}
+#stiching_box{}
+#epuipment_packages_box{}
+#exterior_box{}
+#chassis_box{}
+#leather_deco_box{}
+#paint_exterior_box{}

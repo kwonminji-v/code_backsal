@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: kakao;
+    src: url(../font/KakaoRegular.ttf);
+}
+
+.container {
+    height: auto;
+    /* position:absolute; */
+    margin-top: -10px;
+    font-family: kakao;
+}
+
+.mainImg {
+    width: 100vw;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../../public/main1.png);
+}
+
+.logo {
+    width: 100px;
+}
+
+.title {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.signInOutUpArea {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.signInOutUpAreaText{
+    width: 100px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+.menu_area {
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+.menu_area_area {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu {
+    width: 150px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+@media(width<=500px){
+    .container{
+        width:500px;
+    }
+    .mainImg{
+        width:500px;
+    }
+    .menu_area_area{
+        width:500px;
+    }
+}

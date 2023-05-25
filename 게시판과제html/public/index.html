@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>www.HomeSweetHome.com</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/" rel="icon">
+  <link href="img/dog_icon_big.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/makemj_.css">
+</head>
+
+<body>
+  <!-- 회원가입 모달 창 start  -->
+  <div class="modal fade" id="signup_Modal" tabindex="-1" aria-labelledby="signup_ModalLabel" aria-hidden="true" style="font-family: jua;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #ffc003;">
+          <h1 class="modal-title fs-5" id="signup_ModalLabel">회원 가입</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+          <div class="input-form-backgroud row">
+            <div class="input-form col-md-12 mx-auto">
+              <form class="validation-form" novalidate>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="name">이름</label>
+                    <input type="text" class="form-control" id="signup_name" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      이름을 입력해주세요.
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="nickname">별명</label>
+                    <input type="text" class="form-control" id="signup_nickname" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      별명을 입력해주세요.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-3" id="phonenumber_box">
+                  <label for="phonenumber">핸드폰 번호</label>
+                  <div style="display: flex; width: 20vw; height: 4vh; justify-content:center; align-items: baseline;">
+                    <input type="text" style=" margin-right: 10px;" class="form-control" id="phonenumber_1"
+                      maxlength="3" required> <span> ㅡ </span>
+                    <input type="text" style=" margin-left: 10px; margin-right: 10px;" class="form-control"
+                      id="phonenumber_2" maxlength="4" required> <span> ㅡ </span>
+                    <input type="text" style=" margin-left: 10px;" class="form-control" id="phonenumber_3" maxlength="4"
+                      required>
+                  </div>
+                  <div class="invalid-feedback">
+                    핸드폰 번호를 입력해주세요.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email">이메일</label>
+                  <input type="email" class="form-control" id="signup_email" placeholder="email@example.com" required>
+                  <div class="invalid-feedback">
+                    이메일을 입력해주세요.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="address">주소</label>
+                  <input type="text" class="form-control" id="signup_address" placeholder=" " required>
+                  <div class="invalid-feedback">
+                    주소를 입력해주세요.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="address2">상세주소<span class="text-muted">&nbsp;(필수 아님)</span></label>
+                  <input type="text" class="form-control" id="signup_address2" placeholder="상세주소를 입력해주세요.">
+                </div>
+
+                <hr class="mb-4">
+                <div class="custom-control cusFtom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="aggrement" required>
+                  <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
+                </div>
+                <div class="snsbtn_box" style="display: flex; margin-top: 15px;">
+                  <div class="row">
+                    <div class="col-md-8 mb-3">
+                      <div class="naver_btn" style="padding-right: 10px;">
+                        <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com"><img
+                            src="img/icon_naver.png"
+                            style="float: left; vertical-align: middle; margin-left: 3px; margin-bottom: 3px; max-width: 35px;"
+                            alt=""></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-8 mb-3">
+                      <div class="facebook_btn" style="padding-right: 10px;">
+                        <a href="https://ko-kr.facebook.com/"><img src="img/icon_facebook.png"
+                            style="float: left; vertical-align: middle; margin-left: 3px; margin-bottom: 3px; max-width: 35px;"
+                            alt=""></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-8 mb-3">
+                      <div class="kakao_btn" style="padding-right: 10px;">
+                        <a
+                          href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fproxy%3DeasyXDM_Kakao_to79ylylayn_provider%26ka%3Dsdk%252F1.43.1%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fepis.or.kr%26origin%3Dhttps%253A%252F%252Fepis.or.kr%26response_type%3Dcode%26redirect_uri%3Dkakaojs%26state%3Db5id7l01ypr6odkvnm9uqi%26through_account%3Dtrue%26client_id%3D950f3ae1f2f550e5ba7ff7d9fffc7781&talk_login=hidden#login">
+                          <img src="img/icon_kakao.png"
+                            style="float: left; vertical-align: middle; margin-left: 3px; margin-bottom: 3px; max-width: 35px;"
+                            alt=""></a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="mb-4"></div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 회원가입 모달 창 end  -->
+  <!-- 로그인 모달 창 start  -->
+  <div class="modal fade" style="font-family: jua;" id="login_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="login_modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #ffc003;">
+          <h1 class="modal-title fs-5" id="login_modalLabel">Log-in</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="form-check form-check-inline" style="margin-top: 15px;">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">로그인 상태 유지하기</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+          <button type="button" class="btn btn-primary">로그인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 로그인 모달 창 end  -->
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center" style="justify-content: space-evenly;">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <h1 style="font-size: 20px;">도담도담<span>.</span></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">센터 소개</a></li>
+          <li><a href="#find_dog">실종 동물 찾기</a></li>
+          <li><a href="#foster">입양 동물</a></li>
+          <li><a href="#volunteer">자원봉사 & 후원 신청</a></li>
+          <li><a href="#trainer">훈련사 소개</a></li>
+          <li><a href="./HTML/noticeboard.html">문의게시판</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- <li><a href="#" data-bs-toggle="modal" data-bs-target="#signup_Modal">회원가입</a></li> -->
+          <li class="dropdown"><a href="#"><span>연계 사이트</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="https://www.ekara.org/" target="_blank">동물권 행동 카라</a></li>
+              <li><a href="https://www.yongin.go.kr/pet/index.do" target="_blank">용인시 동물 보호센터</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="navbar-text-box">
+      <span class="navbar-text" style="margin-left: 15px;">
+        <button type="button" id="navlogin_btn" class="btn btn-outline-" data-bs-toggle="modal" data-bs-target="#login_modal">로그인</button>
+        <button type="button" id="navmypage_btn" class="btn btn-outline-">마이페이지</button>
+        <button type="button" id="navlogin_btn" class="btn btn-outline-" data-bs-toggle="modal" data-bs-target="#signup_Modal">회원가입</button>
+      </span>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= 메인화면 Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center section-bg">
+    <div class="container">
+      <div class="row justify-content-between gy-5">
+        <div
+          class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+          <h2 data-aos="fade-up">사지 마세요<br>입양 하세요</h2>
+          <p data-aos="fade-up" data-aos-delay="100">모두가 가진 따듯한 마음들로 많은 동물들이 행복하길 바라는 우리입니다.</p>
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+            <a href="#volunteer_submit" class="btn-book-a-table">자원 봉사 신청하기</a>
+            <a href="https://www.youtube.com/watch?v=uUepdj7clsA"
+              class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch
+                Video</span></a>
+          </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+          <img src="./img/pexels-photo-1108099.jpg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
+  <main id="main">
+    <!-- ======= 센터 소개 Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>About Us</h2>
+          <p>우리와 함께 살아요 </p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-7 position-relative about-img"
+            style="background-image: url(img/c026461721a57836e71f440d84c53db4.jpg) ; background-size: cover;"
+            data-aos="fade-up" data-aos-delay="150">
+            <div class="call-us position-absolute">
+              <h4>입양하세요</h4>
+              <p>02-123-4567</p>
+            </div>
+          </div>
+          <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic" style="font-family: inherit;">
+                일반적으로 한국에서는 매년 대략 10만 마리 이상의 유기견이 발생하며, 대부분이 사육주인의 관리 미숙으로 인한 문제가 원인. 
+                이러한 문제를 해결하기 위해 한국 정부는 유기견 수를 줄이기 위한 다양한 정책들을 시행하고 있다.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-all"></i>전국 반려 동물 인구는 천5백만 가구 이상</li>
+                <li><i class="bi bi-check2-all"></i>‘DNA 실명분양 시스템’ 개발 반려견 분양부터 DNA 번호를 등록한 뒤에 실명 분양</li>
+                <li><i class="bi bi-check2-all"></i>식용견 농장의 개 학대 및 불법 도축 등의 심각성 대두</li>
+              </ul>
+              <p>
+                유기 동물 10마리 중 4마리가 보호소 안에서 죽음을 맞이한 셈이다. 현행 '동물보호법'에 따르면 유기 동물 보호조치를 공고해야 하는 기간은 7일이다.
+                공고가 있는 날부터 10일이 경과해도 소유자를 알 수 없는 경우에는 해당 시·도지사 또는 시장·군수·구청장에게 그 동물의 소유권이 이전된다.
+                결국 기한이 지나도록 입양처를 찾지 못하면 이들 대부분이 안락사 될 운명에 처한다. 언제나 포화 상태인 보호소에서 이들 한 마리 한 마리를 보살피기는 현실적으로 어려운 상황
+              <div class="position-relative mt-4">
+                <img src="./img/20170510000752_0.jpg" class="img-fluid" alt="">
+                <a href="https://www.youtube.com/watch?v=bynzFMHVqBY" class="glightbox play-btn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- 센터 소개 Section -->
+
+    <!-- ======= 잃어버린 반려동물 찾기 Section ======= -->
+    <section id="find_dog" class="why-us section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-box">
+              <h3>반려동물을 찾아주세요 !</h3>
+              <ul>
+                <li> 많은 분들의 관심과 도움이 필요합니다.</li>
+                <li> 실종된 동물들을 찾을 수 있게 도와주세요.</li>
+                <li> 해당 동물들을 발견하신 분은 02-123-1234로 연락주세요.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- 최근 올라온 공고 Box -->
+
+          <div class="col-lg-8 d-flex align-items-center">
+            <div class="row gy-4">
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <img src="./img/streetdog_2.jpg" style="width: 250px;" class="card-img-top" alt="...">
+                  <br>
+                  <p style="font-size: 18px; color: black; font-family: jua;">이름 : 감자<br>나이 : 2세<br>성별 : 남아<br>헤어진 장소 : 미금역 3번출구</p>
+                  <div class="text-center">
+                    <a href="https://www.animal.go.kr/front/index.do" target="_blank" class="more-btn"><i
+                        class="bi bi-box-arrow-down" style="font-size: 12px; width: 35px; height: 32px;"></i></a>
+                  </div>
+                  <p><a href="">자세히 보기</a></p>
+                </div>
+              </div>
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <img src="./img/dog_5.jpg" style="width: 250px;" class="card-img-top" alt="...">
+                  <br>
+                  <p style="font-size: 18px; color: black; font-family: jua;">이름 : 쿠키<br>나이 : 2세<br>성별 : 남아<br>헤어진 장소 : 미금역 3번출구</p>
+                  <div class="text-center">
+                    <a href="https://www.animal.go.kr/front/index.do" target="_blank" class="more-btn"><i
+                        class="bi bi-box-arrow-down" style="font-size: 12px; width: 35px; height: 32px;"></i></a>
+                  </div>
+                  <p><a href="">자세히 보기</a></p>
+                </div>
+              </div>
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <img src="./img/streetdog_5.jpg" style="width: 250px;" class="card-img-top" alt="...">
+                  <br>
+                  <p style="font-size: 18px; color: black; font-family: jua;" >이름 : 봉구<br>나이 : 2세<br>성별 : 남아<br>헤어진 장소 : 미금역 3번출구</p>
+                  <div class="text-center">
+                    <a href="https://www.animal.go.kr/front/index.do" target="_blank" class="more-btn"><i
+                        class="bi bi-box-arrow-down" style="font-size: 12px; width: 35px; height: 32px;"></i></a>
+                  </div>
+                  <p><a href="">자세히 보기</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= 유기동물 개체수 Section ======= -->
+    <section id="stats" class="stats-counter">
+      <div class="container" data-aos="zoom-out">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="120000" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>유기동물들</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1500" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>반려동물 가구 수</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="2" data-purecounter-end="15.7" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>안락사 진행률</p>
+            </div>
+          </div>
+          <!-- End Stats Item -->
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>보호소의 수</p>
+            </div>
+          </div><!-- End Stats Item -->
+        </div>
+      </div>
+    </section>
+    <!-- End Stats Counter Section -->
+
+    <!-- ======= 관심이 필요한 유기동물들 ======= -->
+    <section id="foster" class="menu">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>입양을 기다리고 있어요</h2>
+          <p>제 가족이 되어주세요 !</p>
+        </div>
+        <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#small_dog">
+              <h4>소형견</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#medium_dog">
+              <h4>중형견</h4>
+            </a><!-- End tab nav item -->
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#big_dog">
+              <h4>대형견</h4>
+            </a>
+          </li><!-- End tab nav item -->
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#baby_dog">
+              <h4>아기강아지</h4>
+            </a>
+          </li><!-- End tab nav item -->
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+          <div class="tab-pane fade active show" id="small_dog">
+            <div class="tab-header text-center">
+              <p>종류</p>
+              <h5>믹스견</h5>
+            </div>
+            <div class="container" style="position: relative; left: 15vw;">
+              <div class="row gy-5">
+                <div class="col-lg-8 menu-item">
+                  <a href="./img/dog_9.jpg" class="glightbox"><img src="./img/dog_9.jpg" class="menu-img img-fluid"
+                      alt=""></a>
+                  <h4>동글이</h4>
+                  <p class="ingredients">
+                    여아 , 소심하고 겁이 많은 성격
+                  </p>
+                  <p class="price">
+                    성남시 보호센터
+                  </p>
+                </div><!-- Menu Item -->
+              </div>
+            </div>
+          </div>
+          <!-- End Starter Menu Content -->
+          <div class="tab-pane fade" id="medium_dog">
+
+            <div class="tab-header text-center">
+              <p>종류</p>
+              <h5>닥스훈트</h5>
+            </div>
+
+            <div class="container" style="position: relative; left: 15vw;">
+              <div class="row gy-5">
+
+                <div class="col-lg-8 menu-item">
+                  <a href="./img/dog_6.jpg" class="glightbox"><img src="./img/dog_6.jpg" class="menu-img img-fluid"
+                      alt=""></a>
+                  <h4>까미</h4>
+                  <p class="ingredients">
+                    남아, 사람친화적이고, 식탐이 많음
+                  </p>
+                  <p class="price">
+                    용인시 보호센터
+                  </p>
+                </div><!-- Menu Item -->
+              </div>
+            </div>
+          </div><!-- End Breakfast Menu Content -->
+          <div class="tab-pane fade" id="big_dog">
+
+            <div class="tab-header text-center">
+              <p>종류</p>
+              <h5>허스키</h5>
+            </div>
+
+            <div class="container" style="position: relative; left: 15vw;">
+              <div class="row gy-5">
+
+                <div class="col-lg-8 menu-item">
+                  <a href="./img/허ㅅ키.jpg" class="glightbox"><img src="./img/허ㅅ키.jpg" class="menu-img img-fluid"
+                      alt=""></a>
+                  <h4>맥스</h4>
+                  <p class="ingredients">
+                    남아, 활발하고 야외활동을 좋아함
+                  </p>
+                  <p class="price">
+                    수원시 보호센터
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="baby_dog">
+
+            <div class="tab-header text-center">
+              <p>종류</p>
+              <h5>진도믹스</h5>
+            </div>
+            <div class="container" style="position: relative; left: 15vw;">
+              <div class="row gy-5">
+
+                <div class="col-lg-8 menu-item">
+                  <a href="./img/진도 믹스.jpg" class="glightbox"><img src="./img/진도 믹스.jpg" class="menu-img img-fluid"
+                      alt=""></a>
+                  <h4>왕자</h4>
+                  <p class="ingredients">
+                    여아, 순한 성격에 장난기가 많음
+                  </p>
+                  <p class="price">
+                    용인시 보호센터
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- ======= 도움이 필요한 센터 Section ======= -->
+    <section id="volunteer" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>도움의 손길이 필요합니다.</h2>
+          <p>자원봉사자 분들이 필요한 보호소들</p>
+        </div>
+
+        <div class="slides-1 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        안락사 없는 유기견쉼터를 지켜주세요..!
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>부산 보호소</h3>
+                      <!-- <h4>6years old &amp; Newyork</h4> -->
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="./img/center_3.jpg" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        300마리가 넘는 강아지들이 열악한 환경속에서 보호중입니다.<br>
+                        많은 자원 봉사자 분들의 도움이 필요합니다.
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3> oo 보호소</h3>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="./img/center_1.jpg" style="width: 900px;" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        Saving one rescue dog may not change the world, but it will surely change that dog's world.
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>helen</h3>
+                      <h4>69years old &amp; Callifonia</h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="../public/img/grandma.png" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+    </section>
+    <!-- 해외 입양자들의 후기 end -->
+    <!-- ======= 자원봉사 신청서 Section ======= -->
+    <section id="volunteer_submit" class="book-a-table">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2 style="color: black!important;">자원 봉사 신청서</h2>
+        </div>
+
+        <div class="row g-0">
+
+          <div class="col-lg-4 reservation-img" style="background-image: url(./img/istockphoto-1097545046-612x612.jpg);"
+            data-aos="zoom-out" data-aos-delay="200"></div>
+
+          <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
+            <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="100">
+              <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" name="volunteer_name" class="form-control" id="volunteer_name" placeholder="이름"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="email" class="form-control" name="volunteer_email" id="volunteer_email" placeholder="이메일"
+                    data-rule="email" data-msg="Please enter a valid email">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" class="form-control" name="volunteer_phone" id="volunteer_phone"
+                    placeholder="핸드폰 번호" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" name="volunteer_date" class="form-control" id="volunteer_date" placeholder="날짜"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" class="form-control" name="volunteer_time" id="volunteer_time" placeholder="시간"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="number" class="form-control" name="volunteer_people" id="volunteer_people"
+                    placeholder="# 방문자 수" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">따듯한 마음을 나누어주셔서 감사합니다. 자원 봉사 관련 정보는 이메일 및 핸드폰 메세지로 발송예정입니다.</div>
+              </div>
+              <div class="text-center"><button type="submit">자원봉사 신청하기</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 센터의 훈련사들 start -->
+    <section id="trainer" class="chefs section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2 style="font-size: 30px;">훈련사 소개</h2>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="chef-member">
+              <div class="member-img">
+                <img src="img/profile_1.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>박보검</h4>
+                <span>3년 차 훈련사</span>
+                <p>서울호서전문학교 애견훈련 전공 졸업<br>
+                  한국애견협회(KKC) 반려견 지도사 3급 취득<br>
+                  한국애견협회(KKC) 클리커 전문가 Starter 자격증 취득<br>
+                  Wellness Dog Puller 세미나 과정 수료<br>
+                  KKC / KKF 어질리티 대회 비기너, 노비스 입상<br>
+                  일본 OPDES 어질리티 대회 비기너 1등</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Chefs Member -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="chef-member">
+              <div class="member-img">
+                <img src="img/profile_2.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>배수지</h4>
+                <span>1년차 훈련사</span>
+                <p>훈련사 자격증 3급 취득<br>
+                  훈련사 자격검정 우수상 취득-핸들링 자격증 3급 취득<br>
+                  프리스비 D/A여자부분 3등 수상<br>
+                  훈련사 자격검정 우수상 취득</p>
+              </div>
+            </div>
+          </div><!-- End Chefs Member -->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="chef-member">
+              <div class="member-img">
+                <img src="img/profile_3.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>김우빈</h4>
+                <span>5년차 훈련사</span>
+                <p>공주대학교 특수동물학 전공<br>
+                  KPA Dog trainer foundations(Karen Pryor Academy)<br>
+                  ‘Kaitoda Masanori' Lemonde Dog School 교육 참관<br>
+                  ‘Katsuhiko Kameda' Merry Legs Dog School 어질리티 개인레슨 이수<br>
+                  - JPTA Dog Immune Massage Introductory Course 교육 수료<br>
+                  - 반려동물 행동교정사 1급<br>
+                  - 반려동물 관리사 1급<br>
+                  - 심리상담사 1급</p>
+              </div>
+            </div>
+          </div><!-- End Chefs Member -->
+
+        </div>
+
+      </div>
+    </section><!-- End Chefs Section -->
+
+
+    <!-- ======= 자원봉사 신청서 Section ======= -->
+    <section id="book-a-table" class="book-a-table">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2 style="font-size: 35px;">자원 봉사 신청서</h2>
+        </div>
+
+        <div class="row g-0">
+
+          <div class="col-lg-4 reservation-img"
+            style="background-image: url(./img/istockphoto-1097545046-612x612.jpg); background-size: cover;"
+            data-aos="zoom-out" data-aos-delay="200"></div>
+
+          <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
+            <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="100">
+              <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" name="submit_name" class="form-control" id="submit_name" placeholder="이름"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="email" class="form-control" name="submit_email" id="submit_email" placeholder="이메일"
+                    data-rule="email" data-msg="Please enter a valid email">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" class="form-control" name="submit_phone" id="submit_phone" placeholder="핸드폰 번호"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" name="submit_date" class="form-control" id="submit_date" placeholder="날짜"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" class="form-control" name="submit_time" id="submit_time" placeholder="시간"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="number" class="form-control" name="submit_people" id="submit_people"
+                    placeholder="# 방문자 수" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">따듯한 마음을 나누어주셔서 감사합니다. 자원 봉사 관련 정보는 이메일 및 핸드폰 메세지로 발송예정입니다.</div>
+              </div>
+              <div class="text-center"><button type="submit">자원봉사 신청하기</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======= 찾아 오시는 길 Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>찾아 오시는 길</h2>
+        </div>
+
+        <div class="mb-3">
+          <iframe style="border:0; width: 100%; height: 350px;"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.8163088848!2d127.14734561530335!3d37.275782779853415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
+            4f13.1!3m3!1m2!1s0x357b50f4f53e6deb%3A0xb0488f5b3251cf11!2z64-Z67Cx7Zi47IiY6rO17JuQ!5e0!3m2!1sko!2skr!4v1679836271676!5m2!1sko!2skr" width="600" height="450"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            frameborder="0" allowfullscreen></iframe>
+        </div><!-- End Google Maps -->
+
+        <div class="row gy-4">
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-map flex-shrink-0"></i>
+              <div>
+                <h3>주소</h3>
+                <p>경기도 용인시 행복구 놀이동 1번길 123-777</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item d-flex align-items-center">
+              <i class="icon bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>이메일</h3>
+                <p>info@example.com</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>전화번호</h3>
+                <p>070-1234-5678</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-share flex-shrink-0"></i>
+              <div>
+                <h3>운영 시간</h3>
+                <div><strong>월 - 금 :</strong> 10AM - 20PM;
+                  <strong>일요일 및 공휴일:</strong> Closed
+                </div>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form p-3 p-md-4">
+          <div class="row">
+            <div class="col-xl-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="이름" required>
+            </div>
+            <div class="col-xl-6 form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="이메일" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="주제" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" placeholder="메세지" required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">메세지 보내기</button></div>
+        </form><!--End Contact Form -->
+
+      </div>
+    </section><!-- End Contact Section -->
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Address</h4>
+            <p>
+              경기도 용인시 행복구 <br>
+              놀이동 1번길 123-777<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>입양 문의</h4>
+            <p>
+              <strong>Phone:</strong> 070-1234-5678<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>고객 센터</h4>
+            <p>
+              <strong>Mon-Sat: 10AM</strong> - 20PM<br>
+              Saturday&Sunday: Closed
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>DodamDodam</span></strong>. All Rights Reserved
+      </div>
+
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">Bootstrap</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="./js/signup_login.js"></script>
+
+  <!-- 메인 JS 파일 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>

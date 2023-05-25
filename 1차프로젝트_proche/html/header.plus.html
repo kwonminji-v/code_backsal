@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>model_info</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/info_spec.css">
+    <link rel="stylesheet" href="../css/spec혜연.css">
+    <link rel="stylesheet" href="../css/container1혜연.css">
+    <link rel="stylesheet" href="../css/container2혜연.css">
+    <link rel="stylesheet" href="../css/container3혜연.css">
+    <link rel="stylesheet" href="../css/container4혜연.css">
+    <link rel="stylesheet" href="../css/container5혜연.css">
+    <link rel="stylesheet" href="../css/container6혜연.css">
+    <link rel="stylesheet" href="../css/container7혜연.css">
+    <link rel="stylesheet" href="../css/container8혜연.css">
+    <link rel="stylesheet" href="../css/container9혜연.css">
+    <link rel="stylesheet" href="../css/container10혜연.css">
+    <link rel="stylesheet" href="../css/container11혜연.css">
+    <link rel="stylesheet" href="../css/container12혜연.css">
+    <script src="../js/model_info.js"></script>
+    <script src="../js/_header.js"></script>
+    <script src="https://kit.fontawesome.com/ab37fbcfbd.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/color/jquery.color-2.1.2.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="../js/container4.js"></script>
+    <script src="../js/container3.js"></script>
+    <script src="../js/container5.js"></script>
+    <script src="../js/container9.js"></script>
+    <script src="../js/spec.js"></script>
+
+
+    <style>
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            animation: fontColor 0.8s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes fontColor {
+            from {}
+
+            to {
+                color: red
+            }
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        header {
+            padding: 10px;
+            width: 100vw;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            align-items: baseline;
+        }
+
+        .logo_img {
+            top: 0px;
+            position: absolute;
+            z-index: 5;
+            border: 1px solid black;
+            margin-left: 70px;
+            width: 167px;
+            height: 140px;
+        }
+
+        .links {
+            display: flex;
+            width: 50%;
+            height: 100%;
+            align-items: baseline;
+            margin-left: 300px;
+        }
+
+        .main_menu {
+            display: flex;
+            font-weight: bold;
+            color: black;
+            font-size: 15px;
+            padding: 29px 29px 29px 25px;
+            width: 50%;
+            height: 100%;
+            text-align: center;
+            justify-content: flex-start;
+            cursor: pointer;
+        }
+
+        .icons {
+            display: flex;
+            padding-left: 350px;
+        }
+
+        .icons a {
+            font-size: 20px;
+            color: black;
+            padding: 20px;
+            align-items: center;
+            text-underline-offset: 0.5em;
+        }
+
+        input {
+            border: none;
+        }
+
+        #add_menu {
+            font-size: 20pt;
+            padding: 10px;
+        }
+
+   
+
+        /* 각 요소들의 웹페이지 크기에 따른 반응형을 만들기 위해 container(width & height = 100vw, 100vh)
+        에 각 div요소를 %로 설정했다. 브라우저 크기가 줄면 텍스트나 div요소 간 방해로 인해 배치가 흐트려지는데
+        이를 min-width로 배치가 틀어질 때의 가로 픽셀값보다 조금 크게 설정해서 방지했다.*/
+    </style>
+</head>
+
+<body onload="showImage()">
+    <div>
+        <header class="main_header">
+            <a href="#"><img src="../img/porsche-mark.jpeg" class="logo_img"></a>
+            <div class="links">
+                <a href="../html/model_info(혜연).html" class="main_menu" id="info" onmouseover="kor1()"
+                    onmouseout="eng1()">INFORMATION</a>
+                <a href="#" class="main_menu" id="carname" onmouseover="kor2()" onmouseout="eng2()">PORSCHE 911</a>
+                <a href="#" class="main_menu" id="choicecar" onmouseover="kor3()" onmouseout="eng3()">CUSTOMIZING</a>
+                <a href="../html/login_page.html" class="main_menu" id="login" onmouseover="kor4()"
+                    onmouseout="eng4()">SIGN UP</a>
+            </div>
+            <div class="top_icon">
+                <div class="icons">
+                    <a href="../html/login_page.html"><i class="fa-solid fa-person"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                    <a href="https://www.instagram.com/porsche/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <input type="button"><a href="#" id="add_menu"><i class="fa-solid fa-grip-lines"></i></a>
+        </header>
+
+        <div id="container1">
+            <div class="img">
+                <div id="upper_text_box">
+                    <div class="body_type">
+                        <p>All</p>
+                        <p>Coupe</p>
+                        <p>Cabriolet</p>
+                        <p>Targa</p>
+                    </div>
+                    <div class="model_name">
+                        <p>911 Carrera<br>
+                            <span>158,700,000KRW부터<sup>1 2</sup></span>
+                        </p>
+                    </div>
+                </div>
+                <div id="lower_text_box">
+                    <div class="spec_intro">
+                        <p class="spec">288kW/392PS <br><span>Power(kW)/Power(PS)</span></p>
+                        <p class="spec">4.2s <br><span>Acceleration 0 - 100 km/h</span></p>
+                        <p class="spec">293km/h <br><span>Top speed</span></p>
+                    </div>
+                    <div id="quick_menu">
+                        <a class="click-modal">
+                            <div>〉 기술 사양</div>
+                        </a>
+                        <a href="Porsche_Car_Configurator.html">
+                            <div>〉 나만의 포르쉐 만들기</div>
+                        </a>
+                        <a href="#">
+                            <div>〉 비교하기</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 2페이지 -->
+    <div id="container2">
+        <main>
+            <div id="image"></div>
+            <div id="text"><br />
+                <p id="title" style="color: white;">911 에디션 50주년 포르쉐 디자인.</p><br />
+                <p style="color: white;"> 911의 전설적인 디자인과 크로노그래프 I의 순수주의 캐릭터가 만나 새로운 아이콘이 탄생했습니다.
+                    전 세계 750대 한정 생산되는 911 에디션 50주년 포르쉐 디자인 모델은 상징적인 시계의 매혹적인 요소와 시대를 초월한 스포츠카 디자인의 이상적인 조화를 선보입니다.
+                    이 특별한 조우는 911과 포르쉐 디자인(Porsche Design)의 성공 스토리를 상징적으로 보여줍니다.</p>
+            </div>
+        </main>
+        <!-- <section>
+
+        </section>  -->
+        <footer>
+            <div id="text">
+                <p id="title">시대를 초월한 디자인의 현대적인 해석.</p><br />
+                <p>911 카레라 디자인의 특징은 상징적인 플라이라인과 우아한 루프 라인입니다.
+                    이는 1963년 이후 줄곧 포르쉐의 특징이었으며, 나아가 고성능 스포츠카의 특징으로 자리잡았습니다.</p>
+            </div>
+            <div id="video">
+                <video src="../img/porsche_video1.mp4" autoplay muted loop></video>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 3페이지 -->
+
+    <div id="container3">
+        <div id="image"></div>
+
+
+        <div id="text">전통과 현대의 조화 - 상징적인 플라이라인과
+            <br>라이트 스트립.
+        </div>
+
+
+    </div>
+
+    <!-- 4페이지 -->
+    <div id="container4">
+        <div id="image"></div>
+        <div id="text">
+            <h1>바디 타입.</h1><br>
+            <div class="title1">
+                <h3>Coupé.</h3>
+            </div>
+            <hr class="hr1">
+
+            <p class="content1">911 쿠페 버전은 포르쉐 DNA를 가장 순수한 형태로<br>
+                구현합니다. 길고 평평한 보닛, 가파른 경사의 윈드<br>
+                스크린. 그리고 뒤쪽을 향해 부드럽게 미끄러지는<br>
+                루프 라인은 오리지널 911의 특징이기도 합니다.</p>
+
+            <div class="title2">
+                <h3>Cabriolet.</h3>
+            </div>
+            <hr class="hr2">
+
+            <p class="content2">911의 오픈 탑 스타일은 언제나 자유로움과 오픈 에<br>
+                어링으로 특징지어져 왔습니다. 카브리올레를 닫으<br>
+                면 완벽한 자동 패브릭 후드 덕분에 911 쿠페 모델의<br>
+                우아한 실루엣을 만날 수 있습니다.</p>
+
+            <div class="title3">
+                <h3 class="title3">Targa.</h3>
+            </div>
+            <hr class="hr3">
+
+            <p class="content3">가장 세련된 911 모델에 '타르가'가 추가되었습니다.<br>
+                특유의 롤오버 바와 혁신적인 루프 콘셉트를 특징으<br>
+                로 하는 911 타르가는 시대를 초월한 클래식입니다.<br>
+                또한 쿠페형 모델의 편안함과 안전성을 동시에 갖춘<br>
+                911의 오픈형 모델입니다.</p>
+        </div>
+
+    </div>
+    <!-- 5페이지 -->
+    <div id="container5">
+        <img id="introimg" border="0">
+        <div id="text">
+            인테리어 시대를 초월하는 디자인, 스포티한 캐릭터,<br>
+            인체 공학적 설계: GT 스포츠 스티어링 휠, 인스트루<br>
+            먼트 클러스터 및 스포츠 시트 플러스가 포함된 콕핏.</div>
+    </div>
+
+
+    <!-- 6페이지 -->
+    <div id="container6">
+        <video src="../img/porsche_video3.mp4" autoplay muted loop>감각적</video>
+        <div id="text">스포츠카 퍼포먼스.
+            <div id="text-inner">
+
+                <div>강력한 트윈 터보 6기<br>
+                    통 수평 대향 엔진</div>
+                <div>고정밀 포르쉐 더블<br>
+                    클러치(PDK)</div>
+                <div>향상된 드라이빙 다이<br>
+                    내믹스 시스템</div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--7페이지 -->
+
+    <div id="container7">
+        <div id="image"></div>
+        <div id="text">
+            버튼을 누르면 솟구치는 아드레날린: 대시보드의<br>
+            모드 스위치와 스톱워치를 포함하는 스포츠 크로노 패키지.
+        </div>
+    </div>
+
+
+
+    <!-- 8페이지 -->
+    <div id="container8">
+        <main>
+            <div class="list">
+                <p class="title">디자인</p>
+                <p class="content">디자인에 대해 자세히 알아보십시오</p>
+            </div>
+            <div class="list">
+                <p class="title">퍼포먼스</p>
+                <p class="content">인상적인 퍼포먼스를 확인해보십시오</p>
+            </div>
+            <div class="list">
+                <p class="title">편안함</p>
+                <p class="content">비교할 수 없는 편안함을 경험해보십시오</p>
+            </div>
+            <div class="list">
+                <p class="title">GTS</p>
+                <p class="content">왜 'GTS'가 훨씬 더 포르쉐 다운 특성을 의미하는지 그 이유를 확인해 보십시오</p>
+            </div>
+            <div class="list">
+                <p class="title">911 에디션 50주년 포르쉐 디자인</p>
+                <p class="content">911 에디션 50주년 포르쉐 디자인 모델에 대해 자세히 알아보십시오</p>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- 9페이지 갤러리  -->
+
+    <div class="container">
+        <div class="slide-container">
+            <div class="slide" id="container9">
+                <p id="gallery">Gallery</p>
+                <div class="grid">
+                    <a href="img\g_img1.jpeg" target=_blank id=img1></a>
+                    <a href="img\g_img2.jpeg" target=_blank id=img2></a>
+                    <a href="img\g_img3.jpeg" target=_blank id=img3></a>
+                    <a href="img\g_img4.jpeg" target=_blank id=img4></a>
+                    <a href="img\g_img5.jpeg" target=_blank id=img5></a>
+                    <a href="img\g_img6.jpeg" target=_blank id=img6></a>
+                </div>
+            </div>
+            <div class="slide" id="container10">
+                <p id="gallery">Gallery</p>
+                <div class="grid">
+                    <a href="img\g2-3.jpeg" target=_blank id=img1></a>
+                    <a href="img\g2-2.jpeg" target=_blank id=img2></a>
+                    <a href="img\g2-1.jpeg" target=_blank id=img3></a>
+                    <a href="img\g2-4.jpeg" target=_blank id=img4></a>
+                    <a href="img\g2-5.jpeg" target=_blank id=img5></a>
+                    <a href="img\g2-6.jpeg" target=_blank id=img6></a>
+                </div>
+            </div>
+            <div class="slide" id="container11">
+                <p id="gallery">Gallery</p>
+                <div class="grid">
+                    <a href="img\g3-1.jpeg" target=_blank id=img1></a>
+                    <a href="img\g3-2.jpeg" target=_blank id=img2></a>
+                    <a href="img\g3-3.jpeg" target=_blank id=img3></a>
+                    <a href="img\g3-4.jpg" target=_blank id=img4></a>
+                    <a href="img\g3-5.jpeg" target=_blank id=img5></a>
+                    <a href="img\g3-6.jpeg" target=_blank id=img6></a>
+                </div>
+            </div>
+        </div>
+        <a href="" id="prev"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="" id="next"><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <script src="../js\container9.js"></script>
+    </div>
+
+
+
+    <div id="container9">
+
+        <div id="container12">
+            <p>
+                © 2023 Porsche Korea Ltd. Legal notice 개인정보처리방침 쿠키 정책 위치정보사업 이용약관 위치기반서비스 이용약관 포르쉐 그룹 부정비리 제보 시스템 Open
+                Source Software Notice.<br>
+                <br>
+                포르쉐 고객센터 080-8100-911<br>
+                <br>
+                ※ 표기된 연비는 표준 모드에 의한 것으로 도로상태, 운전방법, 차량적재, 정비상태 및 외기온도에 따라 실주행연비와 차이가 있습니다.<br>
+                ※ 본 웹사이트에 기재된 내용은 사전에 예고 없이 변경될 수 있으므로 실제 차량과 다를 수 있습니다.<br>
+                ※ 차량 이미지는 실제 모델과 다를 수 있으며, 국내 적용 사양 및 구성에 따라 차이가 있을 수 있습니다.<br>
+                ※ 국내 출시 이전 차량의 경우 국내 공인 연비 정보 및 타이어 에너지소비효율 정보가 존재하지 않을 수 있습니다.<br>
+                ※ 개별소비세 인하 관련 공지사항<br>
+                포르쉐 코리아는 정부의 일시적 개별소비세 인하 정책에 따라 적용 대상 차량에 대해 개별소비세 감면 혜택을 적용합니다.<br>
+                자세한 사항은 포르쉐 센터를 통하여 문의하시기 바랍니다.<br>
+                ※본 페이지에 기재된 차량 가격은 권장소비자가격(MSRP)으로, 선택 사양, 취득세, 운송료 및 기타 핸들링에 대한 비용은 포함하지 않으며 실제 판매 가격과 상이할 수 있습니다.<br>
+            </p>
+        </div>
+        <!--  modal 기능 -->
+        <div class="containerj">
+            <div class="modal">
+                <div id="HeaderBox">
+                    <h1>911 Carrera</h1>
+                    <div class="close-modal">X</div>
+                    <div class="head">
+                        <div class="inline1">
+                            158,7000,000 KRW부터<sup>1 2</sup>
+                            <br><small>가격</small>
+                        </div>
+                        <div class="inline2">
+                            288KW/392PS
+                            <br><small>Power(kw)/Power(ps)</small>
+                        </div>
+                        <div class="inline3">
+                            4.2S
+                            <br><small>Acceleration 0 - 100 km/h</small>
+                        </div>
+                        <div class="inline4">
+                            293km/h
+                            <br><small>Top speed</small>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div id="flexbox">
+                    <div id="main_box">
+                        <div class="main_head">
+                            <div>
+                                <sup>1</sup>본 페이지에 기재된 차량 가격은 권장소비자가격(MSRP)으로 선택 사양, 취득세, 운송료 및 기타 핸들링에 대한 비용은 포함하지 않으며
+                                실제 판매 가격과 상이할 수
+                                있습니다.
+                            </div>
+                            <div>
+                                <sup>2</sup>기재된 수치는 통제된 상황에서 얻을 수 있는 최고 수치로서 환경 및 운전 상황에 따라 달라질 수 있습니다.
+                            </div>
+                        </div>
+                        <div id="spec">
+                            <h2>기술 사양</h2>
+                        </div>
+
+                        <h3 id="Power_unit">Power unit</h3>
+                        <div class="list1">
+                            <table>
+                                <tr>
+                                    <td>Number of cylinders</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>Bore</td>
+                                    <td>91.0mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Stroke</td>
+                                    <td>76.4mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Displacement</td>
+                                    <td>2,981cc</td>
+                                </tr>
+                                <tr>
+                                    <td>Power(PS)</td>
+                                    <td>392PS</td>
+                                </tr>
+                                <tr>
+                                    <td>Power(kW)</td>
+                                    <td>288kW</td>
+                                </tr>
+                                <tr>
+                                    <td>RPM point maximum power</td>
+                                    <td>6,500 r/min</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum engine speed</td>
+                                    <td>7,500 r/min</td>
+                                </tr>
+                                <tr>
+                                    <td>Max. torque</td>
+                                    <td>45.9kg.m</td>
+                                </tr>
+                                <tr>
+                                    <td>RPM range maximum torque</td>
+                                    <td>1,950 - 5,000 r/min</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h3 id="performance">Performance</h3>
+                        <div class="list2">
+                            <table>
+                                <tr>
+                                    <td>Top speed</td>
+                                    <td>293 km/h</td>
+                                </tr>
+                                <tr>
+                                    <td>Accleration 0 - 100 km/h</td>
+                                    <td>4.2s</td>
+                                </tr>
+                                <tr>
+                                    <td>Acceleration 0 - 100 km/h with Sport Chrono Package</td>
+                                    <td>4.0s</td>
+                                </tr>
+                                <tr>
+                                    <td>Acceleration 0 - 160 km/h</td>
+                                    <td>9.3s</td>
+                                </tr>
+                                <tr>
+                                    <td>Acceleration 0 - 160 km/h with Sport Chrono Package</td>
+                                    <td>9.0s</td>
+                                </tr>
+                                <tr>
+                                    <td>Acceleration 0 - 200 km/h</td>
+                                    <td>14.5s</td>
+                                </tr>
+                                <tr>
+                                    <td>Acceleration 0 - 200 km/h with Sport Chrono Package</td>
+                                    <td>14.2s</td>
+                                </tr>
+                                <tr>
+                                    <td>In-gear acceleration (80 - 120 km/h) (50 - 75 mph)</td>
+                                    <td>2.6s</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h3 id="body">Body</h3>
+                        <div class="list3">
+                            <table>
+                                <tr>
+                                    <td>Length</td>
+                                    <td>4,519mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Width</td>
+                                    <td>1,852mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Width(with mirrors)</td>
+                                    <td>2,024mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Height</td>
+                                    <td>1,298mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Wheelbase</td>
+                                    <td>2,450mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Turning circle</td>
+                                    <td>11.2m</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum load</td>
+                                    <td>455kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum permissible roof load with Porsche roof transport system</td>
+                                    <td>75kg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h3 id="capacities">Capacities</h3>
+                        <div class="list4">
+                            <table>
+                                <tr>
+                                    <td>Luggage compartment volume, front</td>
+                                    <td>132l</td>
+                                </tr>
+                                <tr>
+                                    <td>Fuel tank</td>
+                                    <td>64l</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h3 id="price">가격</h3>
+                        <div class="list5">
+                            <table>
+                                <tr>
+                                    <td>포르쉐 더블 클러치(PDK)</td>
+                                    <td>158,700,000 KRW 부터<sup>1 2</sup></td>
+                                </tr>
+                            </table>
+                            <div class="main_foot">
+                                <sup>1</sup>본 페이지에 기재된 차량 가격은 권장소비자가격(MSRP)으로, 선택 사양, 취득세, 운송료 및 기타 핸들링에 대한 비용은 포함하지 않으며
+                                실제 판매 가격과 상이할 수 있습니다. <br> <sup>2</sup>기재된 수치는 통제된 상황에서 얻을 수 있는 최고 수치로서 환경 및 운전 상황에 따라
+                                달라질 수 있습니다.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sidebox">
+                        <img class="sideimg" src="../img/detail_img.png">
+
+                        <div id="img_height">
+                            <div id="img_title">Height</div>
+                            <div id="img_number">1,298mm</div>
+                        </div>
+
+                        <div id="img_width">
+                            <div id="img_title">Width</div>
+                            <div id="img_number">1,852mm</div>
+                        </div>
+
+                        <div id="img_length">
+                            <div id="img_title">Wheelbase</div>
+                            <div id="img_number">2,450mm</div>
+                        </div>
+
+                        <div id="img_wheelbase">
+                            <div id="img_title">Length</div>
+                            <div id="img_number">4,519mm</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div id="footer_box">
+                    <p>
+                        c2023 Porsche Korea Ltd. Legal notice 개인정보처리방침 쿠키정책 위치정보사업 이용약관 위치기반서비스 이용약관 포르쉐 그룹 부정비리 제보 시스템
+                        Open
+                        Source
+                        Software Notice.
+                    </p><br>
+                    <p>포르쉐 고객센터 080-8100-911</p><br>
+                    <p>
+                        ※표기된 연비는 표준 모드에 읭한 것으로 도로상태, 운전방법, 차량적재, 정비상태 및 외기온도에 따라 실주행연비와 차이가 있습니다. <br>
+                        ※본 웹사이트에 기재된 내용은 사전에 예고없이 변경될 수 있으므로 실제 차량과 다를 수 있습니다. <br>
+                        ※차량 이미지는 실제 모델과 다를 수 있으며, 국내 적용 사양 및 구성에 따라 차이가 있을 수 있습니다. <br>
+                        ※국내 출시 이전 차량의 경우 국내 공인 연비 정보 및 타이어 에너지소비효율 정보가 존재하지 않을 수 있습니다. <br>
+                        ※개별소비세 인하 관련 공지사항 <br>
+                        포르쉐 코리아는 정부의 일시적 개별소비세 인하 정책에 따라 적용 대상 차량에 대해 개별소비세 감면 혜택을 적용합니다. <br>
+                        자세한 사항은 포르쉐 센터를 통하여 문의하시기 바랍니다. <br>
+                        ※본 페이지에 기재된 차량 가격은 권장소비자가격(MSRP)으로, 선택 사양, 취득세, 운송료 및 기타 핸들링에 대한 비용은 포함하지 않으며 실제 판매 가격과 상이할 수
+                        있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $('.click-modal').click(function () {
+                    $('.containerj').addClass('modal-open');
+                    $('html').css("overflow", "hidden");
+                    $('.logo_img').css({ zIndex: -1 })
+                    // $('.modal-container').addClass('.close');
+                });
+                $('.close-modal').click(function () {
+                    $('.containerj').removeClass('modal-open');
+                    $('html').css("overflow", "scroll");
+                    $('.logo_img').css({ zIndex: 1 })
+                    // $('.modal-container').removeClass('.close');
+                });
+
+                $(".list1").hide();
+                $("#Power_unit").off('click').on('click', function () {
+                    $(".list1").slideToggle(500);
+                });
+                $(".list2").hide();
+                $("#performance").off('click').on('click', function () {
+                    $(".list2").slideToggle(500);
+                });
+                $(".list3").hide();
+                $("#body").off('click').on('click', function () {
+                    $(".list3").slideToggle(500);
+                });
+                $(".list4").hide();
+                $("#capacities").off('click').on('click', function () {
+                    $(".list4").slideToggle(500);
+                });
+                $(".list5").hide();
+                $("#price").off('click').on('click', function () {
+                    $(".list5").slideToggle(500);
+                });
+            });
+        </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head> </head>
+
+<body>
+  <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+
+  function MinutesToHours() {
+    //setMinutes의 결과는 array이고, 첫번째 요소는 데이터, 두번째 요소는 데이터를 수정하기 위한 함수를 담는다.
+    const [amount, setAmount] = React.useState("");
+    const [inverted, setInverted] = React.useState(false);
+    const onChange = (e) => {
+      setAmount(e.target.value);
+    };
+
+    const reset = () => {
+      setAmount(0);
+    };
+
+    const onInvert = () => {
+      reset();
+      setInverted((current) => !current);
+    };
+    return (
+      <div>
+        <div>
+          <label htmlFor="분"> 분 </label>
+          <input value={inverted ? amount * 60 : amount} onChange={onChange}
+            id="분"
+            type="number"
+            placeholder="분"
+            disabled={inverted}
+          />
+        </div>
+        <div>
+          <label htmlFor="시간"> 시간 </label>
+          <input value={inverted ? amount : Math.round(amount / 60)}
+            id="시간"
+            type="number"
+            placeholder="시간"
+            disabled={!inverted}
+            onChange={onChange}
+          />
+        </div>
+        <button onClick={reset}>초기화</button>
+        <button onClick={onInvert}>{inverted ? "다시 돌아가기" : "변환 필요"}</button>
+      </div>
+    );
+  }
+
+
+  const root = document.getElementById("root");
+
+  function App() {
+    //setMinutes의 결과는 array이고, 첫번째 요소는 데이터, 두번째 요소는 데이터를 수정하기 위한 함수를 담는다.
+    const [amount, setAmount] = React.useState("");
+    const [inverted, setInverted] = React.useState(false);
+    const onChange = (e) => {
+      setAmount(e.target.value);
+    };
+
+    const reset = () => {
+      setAmount(0);
+    };
+
+    const onInvert = () => {
+      reset();
+      setInverted((current) => !current);
+    };
+    return (
+      <div>
+        <h3>시간에 맞게 변환해주는 장치 </h3>
+        <div>
+          <label htmlFor="분"> 분 </label>
+          <input value={inverted ? amount * 60 : amount} onChange={onChange}
+            id="분"
+            type="number"
+            placeholder="분"
+            disabled={inverted}
+          />
+        </div>
+        <div>
+          <label htmlFor="시간"> 시간 </label>
+          <input value={inverted ? amount : Math.round(amount / 60)}
+            id="시간"
+            type="number"
+            placeholder="시간"
+            disabled={!inverted}
+            onChange={onChange}
+          />
+        </div>
+        <button onClick={reset}>초기화</button>
+        <button onClick={onInvert}>{inverted ? "다시 돌아가기" : "변환 필요"}</button>
+      </div>
+    );
+  }
+
+  ReactDOM.render(<App />, root);
+</script>
+
+</html>
+
+<!-- 
+리액트를 import했기 때문에 createElement function을 가진 리액트 object에 접근 가능
+const span 그러나 createElement(“span”) 은 반드시 생성하고자 하는 HTML 태그와 똑같아야함
+
+render - 사용자들에게 script에 작성된 요소들을 보여지게 만들어준다.
+React JS - 어플리케이션이 아주 인터랙티브하도록 만들어주는 library. 엔진과 같다.
+React-dom - library 또는 package. 모든 react element들을 HTML body에 둘 수 있도록 해줌.
+ReactDOM.render() - render의 의미는 react element를 가지고 HTML로 만들어 배치한다는 것. 즉, 사용자에게 보여준다는 의미
+ReactDOM.render(span, span이 가야할 위치)
+-> 그래서 보통 body에 id=“root” 만들어서 span을 root 안에 두라고 함
+
+React.createElement("span", {span의 property}, “span의 내용”)
+-> property는 class name, id도 가능 style도 가능
+
+바닐라JS는 HTML -> JS 순서
+리액트는 JS -> HTML 순서
+
+JS가 element를 생성하고 React JS가 그것을 HTML로 번역하는 것
+React JS는 업데이트 해야 하는 HTML을 업데이트 할 수 있음
+
+ -->
+
+<!-- 
+JSX에서는 label의 태그를 작성할 때, label for과 같은 문법으로 사용하지 않는다. label for을 자바스크립트 에러로 JSX에서는 사용이 안된다. 
+HTML에서는 class를 부여할 때 class라고 적지만 React에선 className을 사용하는 것과 같은 맥락이다.
+
+const onChange = (event) => { setMinutes(event.target.value); }
+내가 입력한 input value의 값을 바탕으로 component를 업데이트 해주고 있다.
+state와 setState가 같이 작성되어야 하는 이유는 초깃값을 설정해주고 event가 발생했을 때, 초깃값으로 설정된 state값을 업데이트 해주고 UI에 보여줘야 하기 때문이다.
+  -->
